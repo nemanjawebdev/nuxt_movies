@@ -1,8 +1,6 @@
 <template>
   <div>
-    <div class="container">
-      <show-movies />
-    </div>
+    <h3>Movie details</h3>
   </div>
 </template>
 

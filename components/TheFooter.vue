@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer container">
     <h1>Footer</h1>
   </footer>
 </template>
@@ -8,9 +8,15 @@
 export default {}
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .footer {
-  min-height: 10vh;
-  background-color: #123b24;
+  min-height: 80px;
+  background-color: #0e101a;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  font-weight: normal;
 }
 </style>

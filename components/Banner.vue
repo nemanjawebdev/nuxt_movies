@@ -1,6 +1,5 @@
 <template>
   <div class="banner">
-    <the-header />
     <div class="img-wrapper">
       <img src="../assets/images/banner-films.jpg" alt="banner" />
     </div>
@@ -13,16 +12,14 @@ export default {}
 
 <style lang="scss" scoped>
 .banner {
-  position: relative;
-  min-height: 40vh;
+  height: 450px;
+  object-fit: cover;
+  overflow: hidden;
   background-color: #001325;
 }
 
 .banner::after {
   content: '';
-  position: absolute;
-  inset: 0;
-  background-color: #001325;
 }
 
 .img-wrapper > img {

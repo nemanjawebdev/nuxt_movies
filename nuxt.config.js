@@ -56,11 +56,14 @@ export default {
 
   // Base URL
   publicRuntimeConfig: {
-    baseUrl: null,
+    apiKey: process.env.API_KEY,
+    baseUrl: 'https://api.themoviedb.org/3/',
+    nowPlaying: 'https://api.themoviedb.org/3/movie/now_playing?',
+    upcomingMovies: 'https://api.themoviedb.org/3/movie/upcoming?',
   },
 
   // API Key
   privateRuntimeConfig: {
-    apiKey: process.env.API_KEY,
+    // apiKey: process.env.API_KEY,
   },
 }

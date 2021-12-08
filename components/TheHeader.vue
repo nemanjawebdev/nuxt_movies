@@ -5,7 +5,6 @@
       <div class="links">
         <NuxtLink class="nav-link" to="/">Home</NuxtLink>
         <NuxtLink class="nav-link" to="/about">About</NuxtLink>
-        <NuxtLink class="nav-link" to="/">Home</NuxtLink>
       </div>
     </nav>
   </header>
@@ -19,10 +18,10 @@ export default {}
 .header {
   position: sticky;
   top: 0;
-  height: 10vh;
+  height: 70px;
   width: 100%;
-  background: hsl(0 0% 100% / 0.1);
   backdrop-filter: saturate(180%) blur(10px);
+  z-index: 99;
 }
 
 // @supports (-webkit-backdrop-filter: saturate(180%) blur(10px)) or

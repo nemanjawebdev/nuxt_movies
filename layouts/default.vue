@@ -1,5 +1,7 @@
 <template>
   <div>
+    <the-header />
+    <banner />
     <main class="app">
       <nuxt />
     </main>
