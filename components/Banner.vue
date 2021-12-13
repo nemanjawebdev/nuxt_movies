@@ -1,7 +1,7 @@
 <template>
   <div class="banner">
     <div class="img-wrapper">
-      <img src="../assets/images/banner-films.jpg" alt="banner" />
+      <nuxt-img src="banner-films.jpg" alt="banner" />
     </div>
   </div>
 </template>
@@ -12,17 +12,13 @@ export default {}
 
 <style lang="scss" scoped>
 .banner {
-  height: 450px;
+  height: 250px;
   object-fit: cover;
   overflow: hidden;
   background-color: #001325;
 }
 
-.banner::after {
-  content: '';
-}
-
-.img-wrapper > img {
-  width: 100%;
+.img-wrapper {
+  position: relative;
 }
 </style>

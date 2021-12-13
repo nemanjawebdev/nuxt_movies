@@ -3,7 +3,7 @@
     <the-header />
     <banner />
     <main class="app">
-      <nuxt />
+      <nuxt keep-alive />
     </main>
     <the-footer />
   </div>

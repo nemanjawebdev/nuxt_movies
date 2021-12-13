@@ -1,32 +1,36 @@
 <template>
   <div class="movies">
-    <div v-for="movie in movies.results" :key="movie.id">
+    <div v-for="item in tvshow.results" :key="item.id">
       <div class="movie">
         <div class="movie_wrapper">
           <nuxt-img
             class="movie_poster"
-            :src="`https://image.tmdb.org/t/p/w500/${movie.poster_path}`"
+            :src="`https://image.tmdb.org/t/p/w500/${item.poster_path}`"
             alt="poster"
           />
-          <span class="rating">{{ movie.vote_average }}</span>
-          <div class="overview">{{ movie.overview }}</div>
+          <span class="rating">{{ item.vote_average }}</span>
+          <div v-if="item.overview.length > 0" class="overview">
+            {{ item.overview }}
+          </div>
+          <div v-else class="overview">No overview</div>
         </div>
         <div class="movie_info">
           <h4 class="movie_title">
-            {{ movie.title.slice(0, 25) }}
-            <span v-if="movie.title.length > 25">...</span>
+            {{ item.original_name.slice(0, 25) }}
+            <span v-if="item.original_name.length > 25">...</span>
           </h4>
           <p class="movie_released">
             Released:
             {{
-              new Date(movie.release_date).toLocaleString('en-GB', {
+              new Date(item.first_air_date).toLocaleString('en-GB', {
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric',
               })
             }}
           </p>
-          <nuxt-link :to="{ name: 'movie-movie', params: { movie: movie.id } }"
+          <nuxt-link
+            :to="{ name: 'tvshow-tvshow', params: { tvshow: item.id } }"
             ><button class="movie_details">Show More</button></nuxt-link
           >
         </div>
@@ -38,7 +42,13 @@
 <script>
 export default {
   // eslint-disable-next-line vue/require-prop-types
-  props: ['movies'],
+  props: ['tvshow'],
+  // props: {
+  //   tvshow: {
+  //     type: Array,
+  //     default: () => {},
+  //   },
+  // },
 }
 </script>
 

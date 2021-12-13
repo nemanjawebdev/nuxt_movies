@@ -1,7 +1,6 @@
 <template>
-  <div>
+  <div class="container">
     <div>{{ movie.title }}</div>
-    <p>{{ $config.apiKey }}</p>
   </div>
 </template>
 
@@ -12,6 +11,9 @@ export default {
       `https://api.themoviedb.org/3/movie/${params.movie}?api_key=${$config.apiKey}&language=en-US`
     )
     return { movie }
+  },
+  head: {
+    title: 'Movie details',
   },
 }
 </script>
